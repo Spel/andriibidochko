@@ -154,28 +154,30 @@
 
     /* ── Project gallery ── */
     .gallery {
-      display: flex;
-      gap: 8px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 6px;
       margin-top: 12px;
-      overflow-x: auto;
-      padding-bottom: 4px;
-      scrollbar-width: thin;
-      scrollbar-color: var(--border) transparent;
     }
 
     .gallery img {
-      height: 120px;
-      width: auto;
-      border-radius: 6px;
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      border-radius: 5px;
       border: 1px solid var(--border);
       object-fit: cover;
-      flex-shrink: 0;
       cursor: pointer;
       transition: opacity 0.2s;
     }
 
     .gallery img:hover {
-      opacity: 0.85;
+      opacity: 0.82;
+    }
+
+    @media (max-width: 540px) {
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
     /* lightbox */
