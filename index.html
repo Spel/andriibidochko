@@ -280,6 +280,128 @@
       margin-bottom: 1px;
     }
 
+    /* ── Research contributions ── */
+    .contributions {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .contribution {
+      border-left: 3px solid var(--accent);
+      padding: 10px 16px;
+      background: var(--tag-bg);
+      border-radius: 0 6px 6px 0;
+    }
+
+    .contribution h3 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .contribution p {
+      font-size: 0.875rem;
+      color: #444;
+    }
+
+    .contribution strong {
+      color: var(--accent);
+    }
+
+    /* ── Publications ── */
+    .publications {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .pub {
+      display: grid;
+      grid-template-columns: 52px 1fr;
+      gap: 12px;
+      align-items: start;
+    }
+
+    .pub-year {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--muted);
+      padding-top: 3px;
+      text-align: right;
+    }
+
+    .pub-content h3 {
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 3px;
+      line-height: 1.4;
+    }
+
+    .pub-content .venue {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    .pub-keywords {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-bottom: 6px;
+    }
+
+    .pub-keywords .tag {
+      font-size: 0.7rem;
+      padding: 2px 8px;
+      background: #f5f5f5;
+      color: #555;
+      border-color: #ddd;
+    }
+
+    .pub-links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .pub-links a {
+      font-size: 0.78rem;
+      color: var(--accent);
+    }
+
+    /* ── Impact cards ── */
+    .impact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .impact-card {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px 16px;
+    }
+
+    .impact-card .impact-number {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .impact-card .impact-label {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    @media (max-width: 540px) {
+      .impact-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
     /* ── Footer ── */
     footer {
       margin-top: 60px;
@@ -574,11 +696,12 @@
         <div class="entry-content">
           <div class="entry-with-logo">
             <div>
-              <h3>PhD · Artificial Intelligence</h3>
+              <h3>PhD · Artificial Intelligence <span style="font-size:0.75rem;font-weight:400;color:#2a9d2a;">✓ Defended July 2026</span></h3>
               <div class="org">Lviv Polytechnic National University</div>
             </div>
             <img src="assets/lviv polytechin.jpeg" alt="Lviv Polytechnic" class="edu-logo" />
           </div>
+          <p style="font-size:0.875rem;color:#444;margin-top:8px;">Thesis: <em>Methods and Tools for Autonomous AI Agents for Reliable Long-Horizon Decision-Making</em></p>
         </div>
       </div>
 
@@ -622,6 +745,138 @@
       </div>
 
     </div>
+  </section>
+
+  <!-- ── Research ── -->
+  <section>
+    <h2>Research</h2>
+    <p style="color:#333;margin-bottom:20px;">
+      I study <strong>autonomous AI agents capable of reliable long-horizon decision-making</strong>.
+      My research focuses on architectures that enable language models to reason, plan, coordinate, and continuously improve
+      while interacting with dynamic environments — and on measuring how well they actually do so.
+    </p>
+
+    <h2 style="margin-bottom:16px;">Research Contributions</h2>
+    <div class="contributions">
+
+      <div class="contribution">
+        <h3>Thought Management System (TMS)</h3>
+        <p>Designed a hierarchical reasoning management framework that enables autonomous agents to maintain, evolve, and optimize reasoning processes across extended execution horizons. Published in <em>Journal of Computational Science</em> (Elsevier, 2026).</p>
+      </div>
+
+      <div class="contribution">
+        <h3>LLMAgentNet</h3>
+        <p>Proposed a decentralized network architecture for coordinating autonomous LLM agents during long-horizon tasks, improving scalability over hierarchical multi-agent systems. Demonstrated reliable task decomposition and agent collaboration at scale.</p>
+      </div>
+
+      <div class="contribution">
+        <h3>Efficient Agent Communication</h3>
+        <p>Developed an inter-agent communication method using semantic references and execution environment variables, achieving up to <strong>7× lower token consumption</strong> without loss of coordination quality — directly reducing inference cost at scale.</p>
+      </div>
+
+    </div>
+
+    <h2 style="margin: 32px 0 16px;">Research Interests</h2>
+    <div class="tags">
+      <span class="tag">Reliable AI Agents</span>
+      <span class="tag">Long-Horizon Reasoning</span>
+      <span class="tag">Agentic Software Engineering</span>
+      <span class="tag">Reinforcement Learning</span>
+      <span class="tag">RLVR</span>
+      <span class="tag">Benchmark-Driven Development</span>
+      <span class="tag">Multi-Agent Coordination</span>
+      <span class="tag">Synthetic Data Generation</span>
+      <span class="tag">AI Infrastructure</span>
+    </div>
+
+    <h2 style="margin: 32px 0 16px;">Publications</h2>
+    <div class="publications">
+
+      <div class="pub">
+        <div class="pub-year">2026</div>
+        <div class="pub-content">
+          <h3>Thought Management System for Long-Horizon, Goal-Driven LLM Agents</h3>
+          <div class="venue">Journal of Computational Science · Elsevier · Vol. 93 · Article 102740</div>
+          <div class="pub-keywords">
+            <span class="tag">LLM agents</span><span class="tag">multi-agent systems</span><span class="tag">thought management</span><span class="tag">long-horizon reasoning</span><span class="tag">AI orchestration</span>
+          </div>
+          <div class="pub-links">
+            <a href="https://doi.org/10.1016/j.jocs.2025.102740" target="_blank">DOI</a>
+            <a href="https://www.sciencedirect.com/science/article/abs/pii/S1877750325002170" target="_blank">ScienceDirect</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub">
+        <div class="pub-year">2025</div>
+        <div class="pub-content">
+          <h3>Optimizing Data Exchange in Multi-Agent Systems via Execution Environment Variables</h3>
+          <div class="venue">Nauka ta Tekhnika Sohodni · No. 10(51) · pp. 1250–1265</div>
+          <div class="pub-keywords">
+            <span class="tag">multi-agent systems</span><span class="tag">LLMs</span><span class="tag">data transfer optimization</span><span class="tag">memory management</span><span class="tag">Node.js</span><span class="tag">scalability</span>
+          </div>
+          <div class="pub-links">
+            <a href="https://doi.org/10.52058/2786-6025-2025-10(51)-1250-1265" target="_blank">DOI</a>
+            <a href="https://perspectives.pp.ua/index.php/nts/article/view/30802" target="_blank">Full text</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub">
+        <div class="pub-year">2024</div>
+        <div class="pub-content">
+          <h3>LLMAgentNet: A Collaborative Network of Autonomous AI Agents for Complex Task Execution</h3>
+          <div class="venue">Scientific Bulletin of UNFU Ukraine · No. 4(35) · pp. 101–104</div>
+          <div class="pub-keywords">
+            <span class="tag">LLMs</span><span class="tag">AI agents</span><span class="tag">autonomous systems</span><span class="tag">multi-agent framework</span><span class="tag">task planning</span>
+          </div>
+          <div class="pub-links">
+            <a href="https://doi.org/10.36930/40350412" target="_blank">DOI</a>
+            <a href="https://nv.nltu.edu.ua/index.php/journal/article/view/2779" target="_blank">Full text</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub">
+        <div class="pub-year">2023</div>
+        <div class="pub-content">
+          <h3>Using Large Language Models for Domain-Specific Language Code Generation</h3>
+          <div class="venue">Herald of Khmelnytskyi National University · No. 4 · pp. 21–24</div>
+          <div class="pub-keywords">
+            <span class="tag">LLMs</span><span class="tag">code generation</span><span class="tag">domain-specific languages</span><span class="tag">GPT-4</span><span class="tag">NLP</span>
+          </div>
+          <div class="pub-links">
+            <a href="https://doi.org/10.31891/2307-5732-2023-323-4" target="_blank">DOI</a>
+            <a href="https://heraldts.khmnu.edu.ua/index.php/heraldts/article/view/572" target="_blank">Full text</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <h2 style="margin: 32px 0 16px;">Research Impact</h2>
+    <div class="impact-grid">
+      <div class="impact-card">
+        <div class="impact-number">40K+</div>
+        <div class="impact-label">Users of AI systems built on research outcomes</div>
+      </div>
+      <div class="impact-card">
+        <div class="impact-number">7×</div>
+        <div class="impact-label">Token reduction in agent communication</div>
+      </div>
+      <div class="impact-card">
+        <div class="impact-number">4</div>
+        <div class="impact-label">Peer-reviewed publications (2023–2026)</div>
+      </div>
+      <div class="impact-card">
+        <div class="impact-number">Elsevier</div>
+        <div class="impact-label">Top-tier venue — Journal of Computational Science</div>
+      </div>
+    </div>
+    <p style="font-size:0.875rem;color:#444;margin-top:16px;">
+      Research has been integrated into university teaching, enterprise AI platforms, educational systems, and autonomous software engineering pipelines.
+      <a href="https://ubos.tech" target="_blank">UBOS.tech</a> and <a href="https://benchgen.ai" target="_blank">BenchGen</a> are direct applications of this research agenda.
+    </p>
   </section>
 
   <!-- ── Skills ── -->
