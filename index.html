@@ -152,6 +152,78 @@
       color: #444;
     }
 
+    /* ── Project gallery ── */
+    .gallery {
+      display: flex;
+      gap: 8px;
+      margin-top: 12px;
+      overflow-x: auto;
+      padding-bottom: 4px;
+      scrollbar-width: thin;
+      scrollbar-color: var(--border) transparent;
+    }
+
+    .gallery img {
+      height: 120px;
+      width: auto;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      object-fit: cover;
+      flex-shrink: 0;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+
+    .gallery img:hover {
+      opacity: 0.85;
+    }
+
+    /* lightbox */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.85);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .lightbox.open {
+      display: flex;
+    }
+
+    .lightbox img {
+      max-width: 90vw;
+      max-height: 90vh;
+      border-radius: 8px;
+      object-fit: contain;
+    }
+
+    .lightbox-close {
+      position: fixed;
+      top: 20px;
+      right: 28px;
+      color: #fff;
+      font-size: 2rem;
+      cursor: pointer;
+      line-height: 1;
+      user-select: none;
+    }
+
+    /* ── entry skills ── */
+    .entry-skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 10px;
+    }
+
+    .entry-skills .tag {
+      font-size: 0.72rem;
+      padding: 2px 9px;
+    }
+
     /* ── Education logo row ── */
     .entry-with-logo {
       display: flex;
@@ -284,25 +356,28 @@
         <div class="entry-date">2026 – now</div>
         <div class="entry-content">
           <h3>Co-Founder</h3>
-          <div class="org">Benchgen</div>
+          <div class="org">Benchgen · Full-time</div>
+          <div class="entry-skills">
+            <span class="tag">AI</span>
+            <span class="tag">Benchmarking</span>
+          </div>
         </div>
       </div>
 
       <div class="entry">
-        <div class="entry-date">2024 – now</div>
+        <div class="entry-date">2022 – now</div>
         <div class="entry-content">
-          <h3>Chief Technology Officer</h3>
-          <div class="org"><a href="https://ubos.tech">UBOS</a></div>
-          <p>Leading technical strategy and AI platform development. Building the next generation of low-code tooling for generative AI applications.</p>
-        </div>
-      </div>
-
-      <div class="entry">
-        <div class="entry-date">2022 – 2024</div>
-        <div class="entry-content">
-          <h3>CEO / CTO</h3>
-          <div class="org"><a href="https://ubos.tech">UBOS</a></div>
-          <p>Founded and led UBOS.tech — a platform enabling anyone to build custom applications on top of Generative AI models without extensive coding expertise.</p>
+          <h3>CTO / CEO → CTO</h3>
+          <div class="org"><a href="https://ubos.tech" target="_blank">UBOS</a> · Full-time · 4 yrs</div>
+          <p>UBOS.tech is a cutting-edge low-code/no-code application development platform designed to simplify the process of creating custom Generative AI solutions. Businesses and developers can build and deploy custom applications without requiring extensive coding knowledge or specialised AI expertise — by chaining multiple LLM or AI/ML API services into a single visual flow.</p>
+          <p style="margin-top:8px;">Key capabilities: Custom ChatGPT for your business, private knowledge bases, GPT-4 API integration, Pinecone vector DB, and visual LLM chaining.</p>
+          <div class="entry-skills">
+            <span class="tag">Low-Code</span>
+            <span class="tag">Generative AI</span>
+            <span class="tag">LLM Orchestration</span>
+            <span class="tag">Node-RED</span>
+            <span class="tag">AI Agents</span>
+          </div>
         </div>
       </div>
 
@@ -310,9 +385,16 @@
         <div class="entry-date">2018 – now</div>
         <div class="entry-content">
           <h3>Chief Executive Officer</h3>
-          <div class="org"><a href="https://ubraine.com">Ubraine.com</a> · Lviv, Ukraine</div>
-          <p>Digital transformation and innovative technology firm with 85+ completed projects. Global client base across the US, UK, Israel, and the Netherlands.
-          Services include ERP, CRM, cloud solutions, and software development for startups.</p>
+          <div class="org"><a href="https://ubraine.com" target="_blank">Ubraine.com</a> · Lviv, Ukraine · 8+ yrs</div>
+          <p>Digital transformation company with 85+ completed projects across diverse domains. Global client base primarily from the US, UK, Israel, and the Netherlands.</p>
+          <p style="margin-top:8px;">Services: ERP, CRM, Digital Transformation, Technology Consulting, Cloud Solutions, and Software Development for Startups. Built data-driven solutions for woodworking, beverage e-commerce, and multi-platform secure data access for Israeli enterprises.</p>
+          <div class="entry-skills">
+            <span class="tag">Digital Transformation</span>
+            <span class="tag">AI</span>
+            <span class="tag">Trading Systems</span>
+            <span class="tag">ERP / CRM</span>
+            <span class="tag">Cloud</span>
+          </div>
         </div>
       </div>
 
@@ -320,7 +402,11 @@
         <div class="entry-date">2022 – 2023</div>
         <div class="entry-content">
           <h3>Senior Software Engineer</h3>
-          <div class="org">SeeDoo</div>
+          <div class="org">SeeDoo · Contract · Remote</div>
+          <div class="entry-skills">
+            <span class="tag">Software Infrastructure</span>
+            <span class="tag">IoT</span>
+          </div>
         </div>
       </div>
 
@@ -328,8 +414,13 @@
         <div class="entry-date">2022</div>
         <div class="entry-content">
           <h3>Inventor — PlayForUkraine.org</h3>
-          <div class="org">Independent</div>
-          <p>Created a cyber-weapon adaptation of the game 2048 within two days of Russia's invasion of Ukraine. Adopted and promoted by the Cyber Police and the Ukrainian Parliament.</p>
+          <div class="org">Independent · Self-employed</div>
+          <p>A cyber-weapon adaptation of the game 2048 developed and launched within two days of Russia's invasion of Ukraine, together with a tech team from Lviv. Rapidly adopted and promoted by the Cyber Police and the Ukrainian Parliament. The implications of gamified cyber-warfare capabilities continue to be explored.</p>
+          <div class="entry-skills">
+            <span class="tag">Agile</span>
+            <span class="tag">Cyber Defence</span>
+            <span class="tag">Game Dev</span>
+          </div>
         </div>
       </div>
 
@@ -337,8 +428,15 @@
         <div class="entry-date">2017 – 2021</div>
         <div class="entry-content">
           <h3>Solutions Architect</h3>
-          <div class="org">Alpha Trading · New York, US</div>
-          <p>Led the creation of a low-code trading platform for a New York-based hedge fund — featuring a drag-and-drop interface, real-time data feeds, and seamless order execution integration.</p>
+          <div class="org">Alpha Trading · New York, US · Contract · Remote</div>
+          <p>Led the creation of a low-code trading platform for a New York-based hedge fund. The system features a drag-and-drop interface with adjustable widgets — Order Blotter, Order Entry, Dashboard/Workspace Settings, and more — extensible by third-party developers.</p>
+          <p style="margin-top:8px;">Integrated with multiple real-time data feeds and order executors, providing live market analytics and low-latency transaction execution directly from trader dashboards.</p>
+          <div class="entry-skills">
+            <span class="tag">Socket.io</span>
+            <span class="tag">Trading Systems</span>
+            <span class="tag">Low-Code</span>
+            <span class="tag">Real-time Data</span>
+          </div>
         </div>
       </div>
 
@@ -346,8 +444,14 @@
         <div class="entry-date">2012 – 2019</div>
         <div class="entry-content">
           <h3>Co-Founder</h3>
-          <div class="org">Betedo · Ukraine</div>
-          <p>Digital entertainment company with 20+ games. Pioneered gamification for business — enhancing user engagement, customer loyalty, and employee productivity through game mechanics.</p>
+          <div class="org">Betedo · Ukraine · Full-time</div>
+          <p>Digital entertainment company with 20+ diverse games, blending captivating narratives with outstanding gameplay. Beyond traditional gaming, Betedo pioneered gamification for business — integrating game mechanics into non-gaming processes to enhance user engagement, customer loyalty, and employee productivity.</p>
+          <div class="entry-skills">
+            <span class="tag">Unity3D</span>
+            <span class="tag">Game Development</span>
+            <span class="tag">VR</span>
+            <span class="tag">Gamification</span>
+          </div>
         </div>
       </div>
 
@@ -355,8 +459,19 @@
         <div class="entry-date">2011 – 2013</div>
         <div class="entry-content">
           <h3>Founder</h3>
-          <div class="org">Onema.ru</div>
-          <p>Browser-based real-time strategy game.</p>
+          <div class="org">Onema.ru · Self-employed</div>
+          <p>Browser-based real-time strategy game (RTS) built entirely in the browser — an early experiment in multiplayer web gaming.</p>
+          <div class="gallery">
+            <img src="assets/onema/logo.jpg" alt="Onema logo" onclick="openLightbox(this.src)" />
+            <img src="assets/onema/1681066029268.jpeg" alt="Onema screenshot 1" onclick="openLightbox(this.src)" />
+            <img src="assets/onema/1681066041026.jpeg" alt="Onema screenshot 2" onclick="openLightbox(this.src)" />
+            <img src="assets/onema/1681066054741.jpeg" alt="Onema screenshot 3" onclick="openLightbox(this.src)" />
+          </div>
+          <div class="entry-skills">
+            <span class="tag">Game Development</span>
+            <span class="tag">Community</span>
+            <span class="tag">Browser RTS</span>
+          </div>
         </div>
       </div>
 
@@ -468,6 +583,25 @@
   <footer>
     Pure HTML &amp; CSS. No frameworks. &copy; 2026 Andrii Bidochko.
   </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-img" src="" alt="" onclick="event.stopPropagation()" />
+  </div>
+
+  <script>
+    function openLightbox(src) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').classList.add('open');
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('open');
+    }
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  </script>
 
 </body>
 </html>
