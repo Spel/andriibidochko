@@ -152,6 +152,25 @@
       color: #444;
     }
 
+    /* ── Education logo row ── */
+    .entry-with-logo {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .edu-logo {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+      border-radius: 6px;
+      flex-shrink: 0;
+      border: 1px solid var(--border);
+      padding: 3px;
+      background: #fff;
+    }
+
     /* ── Skills / Tags ── */
     .tags {
       display: flex;
@@ -226,7 +245,7 @@
 
   <!-- ── Header ── -->
   <header class="header">
-    <img src="https://avatars.githubusercontent.com/u/3987581?v=4" alt="Andrii Bidochko" />
+    <img src="assets/me.jpeg" alt="Andrii Bidochko" />
     <div class="header-text">
       <h1>Andrii Bidochko</h1>
       <p class="tagline">Teaching machines to think, plan, and act like humans · CEO/CTO at <a href="https://ubos.tech">UBOS.tech</a></p>
@@ -352,32 +371,52 @@
       <div class="entry">
         <div class="entry-date">2022 – 2026</div>
         <div class="entry-content">
-          <h3>PhD · Artificial Intelligence</h3>
-          <div class="org">Lviv Polytechnic National University</div>
+          <div class="entry-with-logo">
+            <div>
+              <h3>PhD · Artificial Intelligence</h3>
+              <div class="org">Lviv Polytechnic National University</div>
+            </div>
+            <img src="assets/lviv polytechin.jpeg" alt="Lviv Polytechnic" class="edu-logo" />
+          </div>
         </div>
       </div>
 
       <div class="entry">
         <div class="entry-date">2018 – 2020</div>
         <div class="entry-content">
-          <h3>Master's · Innovation &amp; Entrepreneurship</h3>
-          <div class="org">Lviv Business School of UCU (LvBS)</div>
+          <div class="entry-with-logo">
+            <div>
+              <h3>Master's · Innovation &amp; Entrepreneurship</h3>
+              <div class="org">Lviv Business School of UCU (LvBS)</div>
+            </div>
+            <img src="assets/ucubusinessschool_logo.jpeg" alt="LvBS UCU" class="edu-logo" />
+          </div>
         </div>
       </div>
 
       <div class="entry">
         <div class="entry-date">2016 – 2018</div>
         <div class="entry-content">
-          <h3>Master's · Artificial Intelligence</h3>
-          <div class="org">Lviv Polytechnic National University</div>
+          <div class="entry-with-logo">
+            <div>
+              <h3>Master's · Artificial Intelligence</h3>
+              <div class="org">Lviv Polytechnic National University</div>
+            </div>
+            <img src="assets/lviv polytechin.jpeg" alt="Lviv Polytechnic" class="edu-logo" />
+          </div>
         </div>
       </div>
 
       <div class="entry">
         <div class="entry-date">2012 – 2016</div>
         <div class="entry-content">
-          <h3>Bachelor's · Computer Science</h3>
-          <div class="org">Lviv Polytechnic National University</div>
+          <div class="entry-with-logo">
+            <div>
+              <h3>Bachelor's · Computer Science</h3>
+              <div class="org">Lviv Polytechnic National University</div>
+            </div>
+            <img src="assets/lviv polytechin.jpeg" alt="Lviv Polytechnic" class="edu-logo" />
+          </div>
         </div>
       </div>
 
