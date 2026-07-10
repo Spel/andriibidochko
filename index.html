@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Andrii Bidochko</title>
+  <style>
+    :root {
+      --bg: #fff;
+      --text: #111;
+      --muted: #666;
+      --accent: #0057b8;
+      --border: #e0e0e0;
+      --tag-bg: #f0f4ff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      font-size: 16px;
+      line-height: 1.65;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 60px 24px 120px;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* ── Header ── */
+    .header {
+      display: flex;
+      align-items: flex-start;
+      gap: 32px;
+      margin-bottom: 48px;
+    }
+
+    .header img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+      border: 2px solid var(--border);
+    }
+
+    .header-text h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+      margin-bottom: 6px;
+    }
+
+    .header-text .tagline {
+      color: var(--muted);
+      font-size: 1rem;
+      margin-bottom: 14px;
+    }
+
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .social-links a {
+      font-size: 0.85rem;
+      color: var(--muted);
+      border: 1px solid var(--border);
+      padding: 3px 10px;
+      border-radius: 20px;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .social-links a:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+      text-decoration: none;
+    }
+
+    /* ── Section ── */
+    section {
+      margin-bottom: 48px;
+    }
+
+    section h2 {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--muted);
+      margin-bottom: 20px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* ── About ── */
+    .about p {
+      color: #333;
+      margin-bottom: 12px;
+    }
+
+    /* ── Timeline ── */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .entry {
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      gap: 16px;
+    }
+
+    .entry-date {
+      font-size: 0.8rem;
+      color: var(--muted);
+      padding-top: 2px;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .entry-content h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .entry-content .org {
+      font-size: 0.875rem;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+
+    .entry-content p {
+      font-size: 0.875rem;
+      color: #444;
+    }
+
+    /* ── Skills / Tags ── */
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      background: var(--tag-bg);
+      color: var(--accent);
+      font-size: 0.8rem;
+      padding: 4px 12px;
+      border-radius: 20px;
+      border: 1px solid #c8d9ff;
+    }
+
+    /* ── Contact ── */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .contact-item {
+      font-size: 0.875rem;
+      color: #333;
+    }
+
+    .contact-item span {
+      color: var(--muted);
+      display: block;
+      font-size: 0.75rem;
+      margin-bottom: 1px;
+    }
+
+    /* ── Footer ── */
+    footer {
+      margin-top: 60px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 540px) {
+      .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .social-links {
+        justify-content: center;
+      }
+
+      .entry {
+        grid-template-columns: 1fr;
+      }
+
+      .entry-date {
+        text-align: left;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Header ── -->
+  <header class="header">
+    <img src="https://avatars.githubusercontent.com/u/3987581?v=4" alt="Andrii Bidochko" />
+    <div class="header-text">
+      <h1>Andrii Bidochko</h1>
+      <p class="tagline">Teaching machines to think, plan, and act like humans · CEO/CTO at <a href="https://ubos.tech">UBOS.tech</a></p>
+      <div class="social-links">
+        <a href="mailto:spelonema@gmail.com">✉ Email</a>
+        <a href="https://www.linkedin.com/in/abidochko" target="_blank">LinkedIn</a>
+        <a href="https://github.com/Spel" target="_blank">GitHub</a>
+        <a href="https://ubos.tech" target="_blank">UBOS.tech</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── About ── -->
+  <section class="about">
+    <h2>About</h2>
+    <p>
+      I'm the CEO/CTO of <a href="https://ubos.tech">UBOS.tech</a> — a platform that helps businesses become autonomous, AI-first organizations.
+      With deep roots in AI research and software engineering, my focus is on making AI agent orchestration practical and accessible.
+    </p>
+    <p>
+      UBOS (Unified Business Operating System) is a leading-edge low-code/no-code application development platform.
+      It streamlines the creation of AI-powered solutions by chaining multiple LLM or AI/ML API services into a single flow —
+      removing the barriers to AI adoption for businesses of all sizes.
+    </p>
+    <p>
+      Based in the Amsterdam area with HQ in Lviv, Ukraine. Currently pursuing a PhD in Artificial Intelligence at Lviv Polytechnic National University.
+    </p>
+  </section>
+
+  <!-- ── Experience ── -->
+  <section>
+    <h2>Experience</h2>
+    <div class="timeline">
+
+      <div class="entry">
+        <div class="entry-date">2026 – now</div>
+        <div class="entry-content">
+          <h3>Co-Founder</h3>
+          <div class="org">Benchgen</div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-date">2024 – now</div>
+        <div class="entry-content">
+          <h3>Chief Technology Officer</h3>
+          <div class="org"><a href="https://ubos.tech">UBOS</a></div>
+          <p>Leading technical strategy and AI platform development. Building the next generation of low-code tooling for generative AI applications.</p>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-date">2022 – 2024</div>
+        <div class="entry-content">
+          <h3>CEO / CTO</h3>
+          <div class="org"><a href="https://ubos.tech">UBOS</a></div>
+          <p>Founded and led UBOS.tech — a platform enabling anyone to build custom applications on top of Generative AI models without extensive coding expertise.</p>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-date">2018 – now</div>
+        <div class="entry-content">
+          <h3>Chief Executive Officer</h3>
+          <div class="org"><a href="https://ubraine.com">Ubraine.com</a> · Lviv, Ukraine</div>
+          <p>Digital transformation and innovative technology firm with 85+ completed projects. Global client base across the US, UK, Israel, and the Netherlands.
+          Services include ERP, CRM, cloud solutions, and software development for startups.</p>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-date">2022 – 2023</div>
+        <div class="entry-content">
+          <h3>Senior Software Engineer</h3>
+          <div class="org">SeeDoo</div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-date">2022</div>
+        <div class="entry-content">
+          <h3>Inventor — PlayForUkraine.org</h3>
+          <div class="org">Independent</div>
+          <p>Created a cyber-weapon adaptation of the game 2048 within two days of Russia's invasion of Ukraine. Adopted and promoted by the Cyber Police and the Ukrainian Parliament.</p>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-date">2017 – 2021</div>
+        <div class="entry-content">
+          <h3>Solutions Architect</h3>
+          <div class="org">Alpha Trading · New York, US</div>
+          <p>Led the creation of a low-code trading platform for a New York-based hedge fund — featuring a drag-and-drop interface, real-time data feeds, and seamless order execution integration.</p>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-date">2012 – 2019</div>
+        <div class="entry-content">
+          <h3>Co-Founder</h3>
+          <div class="org">Betedo · Ukraine</div>
+          <p>Digital entertainment company with 20+ games. Pioneered gamification for business — enhancing user engagement, customer loyalty, and employee productivity through game mechanics.</p>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-date">2011 – 2013</div>
+        <div class="entry-content">
+          <h3>Founder</h3>
+          <div class="org">Onema.ru</div>
+          <p>Browser-based real-time strategy game.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── Education ── -->
+  <section>
+    <h2>Education</h2>
+    <div class="timeline">
+
+      <div class="entry">
+        <div class="entry-date">2022 – 2026</div>
+        <div class="entry-content">
+          <h3>PhD · Artificial Intelligence</h3>
+          <div class="org">Lviv Polytechnic National University</div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-date">2018 – 2020</div>
+        <div class="entry-content">
+          <h3>Master's · Innovation &amp; Entrepreneurship</h3>
+          <div class="org">Lviv Business School of UCU (LvBS)</div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-date">2016 – 2018</div>
+        <div class="entry-content">
+          <h3>Master's · Artificial Intelligence</h3>
+          <div class="org">Lviv Polytechnic National University</div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-date">2012 – 2016</div>
+        <div class="entry-content">
+          <h3>Bachelor's · Computer Science</h3>
+          <div class="org">Lviv Polytechnic National University</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── Skills ── -->
+  <section>
+    <h2>Skills &amp; Interests</h2>
+    <div class="tags">
+      <span class="tag">AI Agent Orchestration</span>
+      <span class="tag">Generative AI</span>
+      <span class="tag">LLM Integration</span>
+      <span class="tag">Low-Code / No-Code</span>
+      <span class="tag">Software Architecture</span>
+      <span class="tag">Node-RED</span>
+      <span class="tag">IoT</span>
+      <span class="tag">Digital Transformation</span>
+      <span class="tag">Startup Founding</span>
+      <span class="tag">Gamification</span>
+      <span class="tag">ERP / CRM</span>
+      <span class="tag">Cloud Solutions</span>
+    </div>
+  </section>
+
+  <!-- ── Contact ── -->
+  <section>
+    <h2>Contact</h2>
+    <div class="contact-grid">
+      <div class="contact-item">
+        <span>Email</span>
+        <a href="mailto:spelonema@gmail.com">spelonema@gmail.com</a>
+      </div>
+      <div class="contact-item">
+        <span>LinkedIn</span>
+        <a href="https://www.linkedin.com/in/abidochko" target="_blank">linkedin.com/in/abidochko</a>
+      </div>
+      <div class="contact-item">
+        <span>Phone</span>
+        +380 67 862 35 36
+      </div>
+      <div class="contact-item">
+        <span>Location</span>
+        Amsterdam Area · Lviv, Ukraine
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    Pure HTML &amp; CSS. No frameworks. &copy; 2026 Andrii Bidochko.
+  </footer>
+
+</body>
+</html>
